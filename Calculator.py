@@ -186,7 +186,6 @@ b_exponential = Button(calc_window, text ="exp", padx=45,pady=20,command=button_
 b_sqrt=Button(calc_window, text ="sqrt",padx=40,pady=20,command=button_square_root)
 
 
-
 # display buttons
 b1.grid(row =4, column=0)
 b2.grid(row =4, column=1)
