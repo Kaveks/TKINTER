@@ -1,1 +1,2 @@
-# Make Apps with General User Interface with python tkinter
+# Make Apps with Graphical
+User Interface with python tkinter
