@@ -6,7 +6,7 @@ from PIL import ImageTk,Image
 
 Image_viewer = Tk()
 Image_viewer.title("IMAGES IN TK")
-Image_viewer.geometry("650x550")
+Image_viewer.geometry("670x575")
 #icon
 Image_viewer.iconbitmap('ICON/icon.ico')
  
@@ -26,6 +26,10 @@ image_list = [img1, img2, img3, img4, img5, img6]
 #display the 1st image=img1
 img_label = Label(image=img1)
 img_label.grid(row=0,column=0 ,columnspan=3)
+
+# status bar label
+status =Label(Image_viewer,text ="Image 1 of"+str(len(image_list)),bg= "blue",bd=3,relief=SUNKEN,anchor=E)
+
 
 #define buttons functionality
 
@@ -48,6 +52,10 @@ def forward(Image_Number):
     img_label.grid(row=0,column=0 ,columnspan=3)
     b_forward.grid(row =1,column=1)
     b_backward.grid(row =1,column=0)
+    
+    # Update status bar when clicking forward
+    status =Label(Image_viewer,text ="Image " + str(Image_Number) + "of" +str(len(image_list)),bg= "blue",bd=3,relief=SUNKEN,anchor=E)
+    status.grid(row=2, column=0,columnspan=3,sticky=W+E)
     return
 
 
@@ -70,6 +78,10 @@ def backward(Image_Number):
     img_label.grid(row=0,column=0 ,columnspan=3)
     b_forward.grid(row =1,column=1)
     b_backward.grid(row =1,column=0)
+    
+    # update status bar
+    status =Label(Image_viewer,text ="Image " + str(Image_Number) + "of" +str(len(image_list)),bg= "blue",bd=3,relief=SUNKEN,anchor=E)
+    status.grid(row=2, column=0,columnspan=3,sticky=W+E)
     return
 
 # buttons
@@ -81,6 +93,10 @@ b_backward = Button(Image_viewer,text="<<",fg="black",bg="green",command =lambda
 b_forward.grid(row =1,column=1)
 b_quit.grid(row =1,column=2)
 b_backward.grid(row =1,column=0)
+
+
+# display status bar
+status.grid(row=2, column=0,columnspan=3,sticky=W+E)
 
 
 Image_viewer.mainloop()
