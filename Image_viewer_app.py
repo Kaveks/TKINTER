@@ -6,7 +6,7 @@ from PIL import ImageTk,Image
 
 Image_viewer = Tk()
 Image_viewer.title("IMAGES IN TK")
-Image_viewer.geometry("700x550")
+Image_viewer.geometry("650x550")
 #icon
 Image_viewer.iconbitmap('ICON/icon.ico')
  
@@ -46,7 +46,7 @@ def forward(Image_Number):
     
     
     img_label.grid(row=0,column=0 ,columnspan=3)
-    b_forward.grid(row =1,column=2)
+    b_forward.grid(row =1,column=1)
     b_backward.grid(row =1,column=0)
     return
 
@@ -68,7 +68,7 @@ def backward(Image_Number):
     
     
     img_label.grid(row=0,column=0 ,columnspan=3)
-    b_forward.grid(row =1,column=2)
+    b_forward.grid(row =1,column=1)
     b_backward.grid(row =1,column=0)
     return
 
@@ -78,8 +78,8 @@ b_quit = Button(Image_viewer,text='Quit',bg="red",command=Image_viewer.quit)
 b_backward = Button(Image_viewer,text="<<",fg="black",bg="green",command =lambda: backward(6))
 
 #display
-b_forward.grid(row =1,column=2)
-b_quit.grid(row =1,column=3)
+b_forward.grid(row =1,column=1)
+b_quit.grid(row =1,column=2)
 b_backward.grid(row =1,column=0)
 
 
