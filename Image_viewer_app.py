@@ -12,12 +12,12 @@ Image_viewer.iconbitmap('ICON/icon.ico')
  
 #images
 
-img1=ImageTk.PhotoImage(Image.open('C:Images/Blue Dun.jpg'))
-img2=ImageTk.PhotoImage(Image.open('C:Images/Black Gnat.jpg'))
-img3=ImageTk.PhotoImage(Image.open('C:Images/Blue Wing Olive.jpg'))
-img4=ImageTk.PhotoImage(Image.open('C:Images/ComparaDun.jpg'))
-img5=ImageTk.PhotoImage(Image.open('C:Images/Disco Midge.jpg'))
-img6=ImageTk.PhotoImage(Image.open('C:Images/Elk Caddis.jpg'))
+img1=ImageTk.PhotoImage(Image.open('Images/Blue Dun.jpg'))
+img2=ImageTk.PhotoImage(Image.open('Images/Black Gnat.jpg'))
+img3=ImageTk.PhotoImage(Image.open('Images/Blue Wing Olive.jpg'))
+img4=ImageTk.PhotoImage(Image.open('Images/ComparaDun.jpg'))
+img5=ImageTk.PhotoImage(Image.open('Images/Disco Midge.jpg'))
+img6=ImageTk.PhotoImage(Image.open('Images/Elk Caddis.jpg'))
 
 # list the images on a Python list
 image_list = [img1, img2, img3, img4, img5, img6]
