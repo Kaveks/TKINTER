@@ -16,7 +16,7 @@ lang =StringVar()
 lang.set("None selected")
 
 
-# define a list of tuples of radio choices
+# define a tuple of tuples of radio choices
 programming_lang=(
     ("Python","Python"),
     ("Java","Java"),
@@ -27,8 +27,8 @@ programming_lang=(
     ("None selected","None selected"),
 )
 
-# iterate in the list of tuples,note options and language iterables
-# are the two value stings of the tuple list eg ("Python","Python")
+# iterate in the tuple of tuples,note options and language iterables which
+# are the two value strings of the tuple eg ("Python","Python")
 for Options,language in programming_lang:
     Radiobutton(frame,text=Options,variable=lang,value=language).pack(anchor=W)
 
@@ -36,8 +36,6 @@ for Options,language in programming_lang:
 def clicked(val):
     R_label=Label(frame,text=val)
     R_label.pack(anchor=W)
-    
-    
 
 # create a label of a radio choice and display on the left hand
 R_label=Label(frame,text=lang.get())
